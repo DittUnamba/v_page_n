@@ -1,0 +1,88 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: imagen_director_unidades
+            field:
+              max_files: 1
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Imagen Director Unidades'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: nombre_director_unidades
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Nombre Director Unidades'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: correo
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: correo
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: direccion_oficina
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Dirección oficina'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - dir_unidades
+              max_items: 1
+              listable: false
+              localizable: true
+title: 'Dir Unidade'

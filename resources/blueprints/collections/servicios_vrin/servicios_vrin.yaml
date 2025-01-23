@@ -1,0 +1,86 @@
+title: 'Servicios VRIN'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: imagen_servicio
+            field:
+              max_files: 1
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Imagen servicio'
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: enlace
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Enlace
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: abrir_en_otra_pagina
+            field:
+              input_type: text
+              default: 'target="_blank"'
+              antlers: false
+              type: text
+              display: 'Abrir en otra pagina'
+              icon: text
+              instructions: |-
+                Para abrir en otra página mantenlo este campo
+                Para abrir pagina en la misma pestaña borrelo
+              listable: hidden
+              instructions_position: below
+              visibility: visible
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - servicios_vrin
+              max_items: 1
+              listable: false
+              localizable: true

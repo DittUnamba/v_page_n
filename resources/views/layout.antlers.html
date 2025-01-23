@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+    <head>
+        <meta charset="utf-8">
+        <link rel="vrin unamba" sizes="75x75" href="/assets/a_home_otros/logo_vrin.png">
+        <link rel="icon" type="image/png" href="/assets/a_home_otros/logo_vrin.png">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+        <title>{{ titulo_pagina ?? site:name }}</title>
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+        <!-- Additional CSS vrinstyle -->
+        <link rel="stylesheet" href="vrinstyle/css/material-kit.css">
+        <link rel="stylesheet" href="vrinstyle/css/estado.css">
+        {{header:header_extra}}
+    </head>
+    <body class="index-page sidebar-collapse">
+
+        {{navbar:template_navbar}}
+
+        {{template_imagen_fondo}}
+
+        <div class="main main-raised">
+            <div class="container"><br>
+                {{ template_content }}
+            </div>
+        </div>
+        
+        {{modal}}
+
+        {{footer:footer_template}}
+
+        {{footer:footer_extra}}
+        <!-- {{chatbot:template_chat}} -->
+    </body>
+</html>

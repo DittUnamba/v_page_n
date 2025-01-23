@@ -1,0 +1,120 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: content
+            field:
+              type: markdown
+              localizable: true
+          -
+            handle: direccion_o_vrin
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Direccion_O_VRIN
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: autor
+            field:
+              mode: select
+              type: users
+              display: Autor
+              icon: users
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+              default:
+                - 06ac68ab-d29f-41e9-9b9a-dd4da3996484
+          -
+            handle: template
+            field:
+              hide_partials: true
+              blueprint: false
+              type: template
+              display: Template
+              icon: template
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: imagen_principal
+            field:
+              max_files: 1
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Imagen Principal'
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required
+              instructions_position: above
+              listable: hidden
+              visibility: visible
+              mode: single
+              inline: false
+              full_width: false
+              columns: 1
+              rows: 1
+              time_enabled: false
+              time_seconds_enabled: false
+              hide_display: false
+          -
+            handle: documentos
+            field:
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: documentos
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+title: Blog
