@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Ruta del proyecto
-PROJECT_DIR=$(dirname "$0")
+PROJECT_DIR="C:\laragon\www\v_page_n"
 
 # Mensaje de commit
 COMMIT_MESSAGE="Cambios realizados automáticamente"
