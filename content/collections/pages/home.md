@@ -106,7 +106,7 @@ block_types:
                 <h1><span class="block-no">{{contador_grupos_de_investigacion}}</span></h1>
                 <b>GRUPOS DE INVESTIGACIÓN</b>
             </div>
-            <div class="sm-block" id="block3">
+            <!--<div class="sm-block" id="block3">
                 <div class="icon-img-wrapper">
                     <div class="eb-counter-image-wrapper">
                         <a title="lineas-de-investigacion" href="/lineas-de-investigacion">
@@ -115,7 +115,7 @@ block_types:
                 </div>
                 <h1><span class="block-no">{{contador_lineas_de_investigacion}}</span></h1>
                 <b>LINEAS DE INVESTIGACIÓN</b>
-            </div>
+            </div>-->
            
         </div>
         <!---==end secction count status ==-->
